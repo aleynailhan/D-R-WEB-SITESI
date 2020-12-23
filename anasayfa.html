@@ -1,0 +1,489 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css"/> 
+</head>
+<body>
+<div class="en-üst"><img src='C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\kasim-bar.jpg'
+ alt='Sonbahar Kitap Kampanyası' width="100%"/>
+
+</div>
+<div class="header-menu">
+<figure class="logo">
+<a href="/"><img src='C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\head-logo.png' alt="d&r"/></a>
+
+</figure>
+<div class="menü">
+<label><a href="#"><p><b>Menü</b></p></a></label>
+</div>
+<div class="arama">
+
+<input type="text" class="searchInput" maxlength="60" placeholder="HANGİ ÜRÜNÜ ARIYORSUN?" autocomplete="off" />
+<input type="button" value="ARA" id="searchIcon" />
+</div>
+<div class="giriş">
+<div class="üye">
+<ul>
+<li><a href="sepetim">Sepetim</a></li>
+<li><a href="üyegiriş">Üye Giriş</a></li>
+<li><a href="hakkimda.html" "target=_blank">Hakkımda</a></li>
+</ul>
+</div>
+
+
+</div>
+
+</div>
+<div class="contanier">
+<div class="popüler-aramalar">
+
+<p><b><strong>Popüler Aramalar:</strong></b></p>
+<ul>
+<li><a href="keşfet">KEŞFET</a></li>
+<li><a href="ders-kitapları">DERS/SINAV KİTAPLARI</a></li>
+<li><a href="oyuncak">D&R OYUNCAK FESTİVALİ BAŞLADI</a></li>
+<li><a href="teknoloji">TEKNOLOJİYLE SINIRLARI ZORLA</a></li>
+<li><a href="yabancıkitap">YABANCI KİTAP</a></li>
+<li><a href="atlas">MUHTEŞEM BİR ATLAS</a></li>
+<li><a href="lego">LEGONUN EĞLENCELİ DÜNYASI</a></li>
+
+
+</ul>
+
+</div>
+<div class="resim">
+<picture>
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim2.jpg" alt="keşfe çık">
+
+</picture>
+</div>
+<div class="slider">
+<div class="solresim">
+ 
+<div class="carousel-one">
+    <div class="mySlides fade-In">
+        <div class="number-text">1/3</div>
+        <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim3.jpg" />
+    </div>
+    <div class="mySlides fade-In">
+        <div class="number-text">2/3</div>
+        <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim4.jpg" />
+    </div>
+    <div class="mySlides fade-In">
+        <div class="number-text">3/3</div>
+        <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim5.jpg" />
+    </div>
+ 
+    <!--Next and previous buttons start-->
+    <a class="prev-slide">&#10094;</a>
+    <a class="next-slide">&#10095;</a>
+    <!--Next and previous buttons end-->
+</div>
+<br />
+ 
+<!--dots start-->
+<div class="dots">
+    <span class="dot dot1"></span>
+    <span class="dot dot2"></span>
+    <span class="dot dot3"></span>
+</div>
+<!--dots end-->
+ 
+<!--carousel end-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+ 
+<script>
+   
+ 
+    var slideIndex = 1;
+    showSlides(slideIndex);
+ 
+    //Next and previous buttons start
+    $(".prev-slide").click(function() {
+        plusSlides(-1);
+    });
+ 
+    $(".next-slide").click(function() {
+        plusSlides(1);
+    });
+ 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    //Next and previous buttons end
+ 
+    //dots start
+    $(".dot1").click(function() {
+        currentSlide(1);
+    });
+    $(".dot2").click(function() {
+        currentSlide(2);
+    });
+    $(".dot3").click(function() {
+        currentSlide(3);
+    });
+ 
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    //dots end
+    
+    
+    function showSlides(n) {
+        var i;
+        var slides = $(".mySlides");
+        var dots = $(".dot");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+ 
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className.replace("active", "");
+            dots[i].classList.remove("active");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    
+    var slideIndex = 0;
+    showSlides();
+ 
+    function showSlides() {
+        var i;
+        var slides = $(".mySlides");
+ 
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+ 
+        slideIndex++;
+ 
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+ 
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // 3 saniyede bir resim değişecek
+    }
+</script>
+</div>
+<div class="sağresim">
+<picture>
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim12.jpg" alt="keşfe çık">
+</picture>
+</div>
+</div>
+
+</div>
+<div class="altıncıkısım"> 
+<table id="tablo">
+<tr>
+<td>
+<tr>
+           <td width="33.33%" align="center" valign="top" >
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                    
+                    
+                   <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim14.jpg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+
+            <td width="33.33%" align="center" valign="top">
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                      
+                   
+       
+                    
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim13.jpg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+           <td width="33.33%" align="center" valign="top">
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                  
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim15.jpg" alt="keşfe çık">
+                    
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+        </tr>
+<tr>
+           <td width="33.33%" align="center" valign="top">
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim16.jpg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+
+            <td width="33.33%" align="center" valign="top">
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim17.jpg" alt="keşfe çık">
+                  
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+           <td width="33.33%" align="center" valign="top">
+           	  <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim18.jpg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+        </tr>
+</td>
+</tr>
+</table>
+</div>
+<div class="yedincikısım">
+<p>
+<a href="puzzle"><font size="4">Puzzle'larda %30'a Varan İndirim!</font></a>
+</p>
+</div>
+<div class="sekizincikısım">
+
+<div class="baslik">
+  <span class="yazi">KİTAP</span>
+  <hr />
+</div>
+<div class="dokuzuncukısım">
+<div class="r1">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim19.jpg" alt="keşfe çık">
+<p>Vezir Gambiti</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">38,00 TL</span>
+<span class="discount-category">%35</span>
+<span class="price"><b align="center">24,70 TL </b></span>
+</div>
+<div class="r2">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim20.jpg" alt="keşfe çık">
+<p>Okunmamış Mesaj</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">35,00</span>
+<span class="discount-category">%40</span>
+<span class="price"><b align="center">21,00 TL</b></span>
+</div>
+<div class="r3">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim21.jpg" alt="keşfe çık">
+<p>Dşarıdakiler</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">35,00</span>
+<span class="discount-category">%40</span>
+<span class="price"><b align="center">21,00 TL</b></span>
+</div>
+<div class="r4">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim22.jpg" alt="keşfe çık">
+<p>2021 Var Olmak</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">35,00</span>
+<span class="discount-category">%40</span>
+<span class="price"><b align="center">18,85 TL</b></span>
+</div>
+<div class="r5">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim23.jpg" alt="keşfe çık">
+<p>Yarınsız Yarın</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">35,00</span>
+<span class="discount-category">%40</span>
+<span class="price"><b align="center">19,72 TL</b></span>
+</div>
+<div class="r6">
+<img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim24.jpg" alt="keşfe çık">
+<p>Sapiens</p>
+<hr width="15px" align="center">
+<a href="yazar-walter" class="who">Walter Tevis</a>
+<p>İnce Kapak</p>
+<span class="old-price">35,00</span>
+<span class="discount-category">%40</span>
+<span class="price"><b align="center">78,75 TL</b></span>
+</div>
+
+
+</div>
+<div class="son">
+<table>
+<tr>
+<td>
+<tr>
+           <td width="30.33%" align="center" valign="top" >
+           	  <table border="0" width="95%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                    
+                    
+                   <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim25.jpg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+
+            <td width="30.33%" align="center" valign="top">
+           	  <table border="0" width="95%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                      
+                   
+       
+                    
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim26.jpeg" alt="keşfe çık">
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+           <td width="30.33%" align="center" valign="top">
+           	  <table border="0" width="95%" cellpadding="15" cellspacing="0" align="center">
+           	  	<tr>
+           	  	   <td align="center" valign="middle" height="190">
+           	  	   	
+                  
+                    <img src="C:\Users\Aleyna\OneDrive\Desktop\d&r web sitesi\img\resim27.jpg" alt="keşfe çık">
+                    
+           	  	   </td>
+           	  	</tr>
+           	  </table>
+           </td>
+        </tr>
+
+
+</td>
+
+
+</tr>
+
+
+
+</table>
+
+<footer>
+    <div id="container">
+        <nav class="footerNav">
+            <ul>
+
+                    <div class="topic-html-content">
+        <div class="topic-html-content-body">
+            <style><!--
+.footerLpNav {display: -ms-flexbox;display: -webkit-flex;display: flex; flex-wrap: wrap;}
+.footerLinks { flex: 1; -webkit-flex: 1; -ms-flex: 1; }
+.footerLinks li {width: 100%; display: block;}
+.footerLinks li a:hover {text-decoration: underline;}
+@media screen and (max-width: 600px) {
+  .footerLinks { flex: 0 0 50%; -webkit-flex: 0 0 50%; -ms-flex: 0 0 50%;}
+}
+--></style>
+<div id="footer_menu_events" class="footerLpNav">
+<ul class="footerLinks">
+<li><a href="/kategori/Kitap" data-id="kitap-click">Kitap</a></li>
+<li><a href="/kategori/EKitap" data-id="ekitap-click">E-Kitap</a></li>
+<li><a href="/kategori/Kirtasiye" data-id="Oyun-Konsol-click">Kırtasiye</a></li>
+<li><a href="/kataloglar_/turkuvaz-dergiler/7007" data-id="dergiler-click">Dergiler</a></li>
+<li><a href="/Kategori_/Kitap/En-Yeniler/10001/3" data-id="yenicikan-click">Yeni &Ccedil;ıkan Kitaplar</a></li>
+<li><a href="/LP-top20" data-id="coksatanlar-click">&Ccedil;ok Satanlar</a></li>
+<li><a href="/yazarlar" data-id="yazarlar-click">Yazarlar</a></li>
+<li><a href="/yayinevleri" data-id="yayinevleri-click">Yayınevleri</a></li>
+<li></li>
+</ul>
+<ul class="footerLinks">
+<li><a href="/kategori/Elektronik" data-id="elektronik-click">Elektronik</a></li>
+<li><a href="/kategori/Hobi-Oyuncak" data-id="hobioyuncak-click">Hobi &amp; Oyuncak</a></li>
+<li><a href="/kategori/Muzik" data-id="muzik-click">M&uuml;zik</a></li>
+<li><a href="/kategori/Oyun-Konsol" data-id="oyunkonsol-click">Oyun &amp; Konsol</a></li>
+<li><a href="/kategori/Kisisel-Urunler" data-id="kisisel-click">Hediyelik Eşyalar</a></li>
+<li><a href="/kategori/Spor-Outdoor" data-id="sporoutdoor-click">Spor &amp; Outdoor</a></li>
+<li><a href="/kampanyalar" data-id="kampanyafooter-click">Kampanyalar</a></li>
+<li><a href="/islem-rehberi" data-id="islem-rehberi-click">İşlem Rehberi</a></li>
+</ul>
+<ul class="footerLinks">
+<li><a href="/hakkimizda" data-id="drhakkinda-click">D&amp;R Hakkında</a></li>
+<li><a href="/magazalar" data-id="magazalarfooter-click">D&amp;R Mağazalar</a></li>
+<li><a href="/common/pagecontent/drcard" data-id="drcard-click">D&amp;R Kart</a></li>
+<li><a href="/hediyekarti" data-id="hediye-click">Sanal Hediye Kartı</a></li>
+<li><a href="/common/pagecontent/dr_mobiluygulamalar" data-id="mobiluygulamalar-click">Mobil Uygulamalar</a></li>
+<li><a href="/yardim" data-id="yardim-click">Yardım / SSS</a></li>
+<li><a href="/iletisim" data-id="iletisim-click">İletişim</a></li>
+<li><a href="/Sectiklerimiz/Kitap#/page=1/sort=newness,desc/categoryid=0/clog=18/parentId=0/price=-1,-1" data-id="sectiklerimiz-click">Sizin İ&ccedil;in Se&ccedil;tiklerimiz</a></li>
+</ul>
+<ul class="footerLinks">
+<li><a href="https://www.dr.com.tr/indirimli-kitap-firsati">KIŞ Kitap Kampanyası</a></li>
+<li><a href="https://www.dr.com.tr/kategori/Hobi-Oyuncak/Kutu-Oyunlari/grupno=00099">Kutu Oyunları</a></li>
+<li><a href="https://www.dr.com.tr/kataloglar_/Yetiskin-Puzzlelar/4754">Puzzle</a></li>
+<li><a href="https://www.dr.com.tr/elektronik-kampanya-firsati">Teknolojiyle Sınırları Zorla</a></li>
+<li><a href="https://www.dr.com.tr/kitap-kampanyalari">T&uuml;m Kitap Kampanyaları</a></li>
+<li><a href="https://www.dr.com.tr/oyuncak-kampanya-firsati">Oyun Keyfini Doyasıya Yaşa</a></li>
+<li><a href="https://www.dr.com.tr/Marka/xiaomi/m=3579">Xiaomi &Uuml;r&uuml;nleri</a></li>
+<li><a href="https://www.dr.com.tr/kategori/Elektronik/Kobo-E-kitap-Okuyucular/grupno=01758">E-Kitap Okuyucu</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+    <div id="container">
+        <hr>
+        <ul class="copyright">
+            <li>&copy; Copyright 2000-2020 Turkuvaz Müzik Kitap Mağazacılık ve Pazarlama A.Ş. Tüm hakları saklıdır.</li>
+            <li class="separator"></li>
+            <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/10740" target="_blank">Bilgi Toplumu Hizmetleri</a></li>
+            <li class="separator"></li>
+            <li><a href="/kisisel-verilere-iliskin-aydinlatma-metni" target="_blank">Kişisel Verilere İlişkin Aydınlatma Metni</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
