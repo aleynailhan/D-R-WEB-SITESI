@@ -1,23 +1,16 @@
 # D-R_WEB_S-TES-
 Web programlama ödevi
 Dosyalar
-...
-...
-...
+img
+anasaya.html
+debug.log
+hakkımda.css
+style.css
+hakkımda.html
 Kullanılan Araçlar
 HTML5
 CSS3
-Bootstrap
-Javascript
-Jquery
+javascript
 Kullanılan Yazılımlar
-VSCode
-WebStorm
 Notepad++
-....
-Kullanılan Yöntemler
-Tasarım sistemleri
-GraphQL
-CI/CD
-Test otomasyonu
-Sunucusuz sistemler
+
